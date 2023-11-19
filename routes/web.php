@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SoalController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,7 @@ Route::middleware(['auth'])->group(function () {
     })->name('home');
 
     Route::resource('users',UserController::class);
+    Route::resource('soals',SoalController::class);
 });
 
 // // Dashboard
